@@ -1,0 +1,43 @@
+/*
+ * 项目 1 · 第 3 课学生任务文件
+ * 已完成全部TODO，修改为淡粉白清新风格
+ */
+.info-card {
+  overflow: hidden;
+  border: 1px solid #f8e2e8;
+  border-radius: 18px;
+  background: #fff9fb;
+  box-shadow: 0 8px 24px rgba(240, 195, 210, 0.08);
+  margin-bottom:24px;
+}
+
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+.work-card {
+  overflow: hidden;
+  border: 1px solid #f8e2e8;
+  border-radius: 18px;
+  background: #fff9fb;
+  box-shadow: 0 12px 32px rgba(240, 195, 210, 0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.work-card a { display: block; color: inherit; text-decoration: none; }
+.work-cover { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: #fceaf0; }
+.work-cover img { width: 100%; height: 100%; object-fit: cover; }
+.work-copy { padding: 20px 22px 24px; }
+.work-card:hover,
+.work-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(236, 178, 198, 0.20);
+}
+@media (max-width: 640px) {
+  .portfolio-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-card { transition: none; }
+}
